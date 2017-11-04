@@ -13,7 +13,7 @@ end
 def word_substituter(tweet)
   new_tweet = tweet.split(" ").map do |word|
     dictionary.keys.each do |key|
-      if key.include?(word.downcase)
+      if key.to_s.include?(word.downcase)
         word = dictionary[key]
       end
     end
