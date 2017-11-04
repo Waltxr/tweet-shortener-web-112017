@@ -29,7 +29,13 @@ def bulk_tweet_shortener(tweet)
 end
 
 def selective_tweet_shortener(tweet)
-
+  tweet.each do |tweet|
+    if tweet.length > 140
+      tweet = bulk_tweet_shortener(tweet)
+    elsif tweet < 130
+      tweet = tweet
+  end
+  tweet
 end
 
 def shortened_tweet_truncator(tweet)
