@@ -34,6 +34,7 @@ def selective_tweet_shortener(tweet)
       tweet = bulk_tweet_shortener(tweet)
     elsif tweet < 130
       tweet = tweet
+    end
   end
   tweet
 end
