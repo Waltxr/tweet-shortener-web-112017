@@ -25,7 +25,7 @@ end
 def bulk_tweet_shortener(tweet)
   shortened_tweets = tweet.map { |tweet| word_substituter(tweet)  }
 
-  shortened_tweets.each { |tweet| puts tweet  }
+  shortened_tweets.each { |tweet| puts tweet.split()  }
 end
 
 def selective_tweet_shortener(tweet)
